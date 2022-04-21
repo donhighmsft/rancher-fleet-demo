@@ -1,0 +1,8 @@
+kind: ClusterGroup
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: cust3
+spec:
+  selector:
+    matchLabels:
+      env: cust3

@@ -1,27 +1,27 @@
 helm:
   chart: "./"
 targetCustomizations:
-- name: dev
+- name: cust1
   helm:
     values:
       image:
         tag: 2.7.0
   clusterSelector:
     matchLabels:
-      env: dev
-- name: staging
+      env: cust1
+- name: cust2
   helm:
     values:
       image:
         tag: 2.7.0
   clusterSelector:
     matchLabels:
-      env: staging
-- name: production
+      env: cust2
+- name: cust3
   helm:
     values:
       image:
         tag: 2.7.0
   clusterSelector:
     matchLabels:
-      env: production
+      env: cust3
