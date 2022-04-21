@@ -1,11 +1,11 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: devops-toolkit
+  name: manifests
   # This namespace is special and auto-wired to deploy to the local cluster
   namespace: fleet-local
 spec:
   # Everything from this repo will be ran in this cluster. You trust me right?
-  repo: "https://github.com/donhighmsft/rancher-fleet-demo"
+  repo: "https://github.com/donhighmsft/fleet-examples.git"
   paths:
-    - manifests
+    - single-cluster/manifests
