@@ -4,19 +4,19 @@ metadata:
   name: devops-toolkit
   namespace: clusters
 spec:
-  repo: https://github.com/donhighmsft/rancher-fleet-demo
+  repo: "https://github.com/donhighmsft/fleet-examples.git"
   branch: main
   targetNamespace: default
   paths:
-  - helm
+  - single-cluster/manifests
   targets:
-  - name: dev
+  - name: cust1
     clusterSelector:
       matchLabels:
-        env: dev
-  - name: staging
+        env: cust1
+  - name: cust2
     clusterSelector:
       matchLabels:
-        env: staging
-  - name: production
-    clusterGroup: production
+        env: cust2
+  - name: cust3
+    clusterGroup: cust3
